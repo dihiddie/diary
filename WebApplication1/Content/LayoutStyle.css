@@ -43,11 +43,10 @@
 
 .fixedmarker {
     position: fixed;
-    display: inline-block;
     margin: 20px 0 0 0;
 }
 
-/*.fixedmarker .fixed*/
+.fixedmarker .fixednext { margin: 10px 0 0 0; }
 
 .addbutton {
     margin: 20px
