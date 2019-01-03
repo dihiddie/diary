@@ -1,0 +1,12 @@
+﻿
+@model IEnumerable<string>
+
+<div class="postcontainer">
+    <p>Ну-ка, фрукты, станьте в ряд</p>
+    <ul>
+        @foreach (var t in Model)
+        {
+            <li>@t</li>
+        }
+    </ul>
+</div>

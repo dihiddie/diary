@@ -1,0 +1,37 @@
+﻿@using dihiddieDiary.Controllers
+@using dihiddieDiary.Helpers
+@{
+    ViewBag.Title = "Дневник";
+}
+
+<link href="~/Content/diary.css" rel="stylesheet" type="text/css" />
+<div class="content">
+    <div class="row">
+        <div class="col-lg-11">
+            @Html.Partial("Post", new string[] { "123", "456", "789" })
+        </div>
+        <div class="col-lg-1">
+            <div class="marker">
+                <div class="fixedmarker">
+                    <button type="button" class="btn btn-success" onclick="createOrEditPost(null)">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </button>
+                    <div class="fixedmarker fixednext">
+                        <button type="button" class="btn btn-warning">
+                            <span class="glyphicon glyphicon-cog"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        function createOrEditPost(postId) {
+            window.location.href =
+                '@Url.Action(nameof(DiaryController.CreateOrEdit), nameof(DiaryController).RemoveController())';
+        }
+    </script>
+}
