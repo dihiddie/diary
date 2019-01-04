@@ -178,8 +178,8 @@ D:\work\diary\WebApplication1\bin\Microsoft.AI.DependencyCollector.xml
 D:\work\diary\WebApplication1\bin\Microsoft.AI.WindowsServer.xml
 D:\work\diary\WebApplication1\bin\Microsoft.AI.Web.xml
 D:\work\diary\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\work\diary\WebApplication1\obj\Debug\dihiddieDiary.csprojAssemblyReference.cache
 D:\work\diary\WebApplication1\obj\Debug\dihiddieDiary.csproj.CoreCompileInputs.cache
 D:\work\diary\WebApplication1\obj\Debug\dihiddieDiary.csproj.CopyComplete
 D:\work\diary\WebApplication1\obj\Debug\dihiddieDiary.dll
 D:\work\diary\WebApplication1\obj\Debug\dihiddieDiary.pdb
+D:\work\diary\WebApplication1\obj\Debug\dihiddieDiary.csprojAssemblyReference.cache

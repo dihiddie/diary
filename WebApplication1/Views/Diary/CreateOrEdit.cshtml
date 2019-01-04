@@ -1,7 +1,42 @@
-﻿
+﻿@model dihiddieDiary.Models.Diary.PostViewModel
 @{
-    ViewBag.Title = "CreateOrEdit";
+    ViewBag.Title = "Новое сообщение";
 }
 
-<h2>CreateOrEdit</h2>
+<link href="~/Content/diary.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css">
 
+<form class="form-horizontal postcontainer">
+
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Title, new { @class = "control-label col-lg-1", style = "vertical-align: middle" })
+        <div class="col-lg-11">
+            @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control form-control-lg", placeholder = "Введите заголовок" } })
+        </div>
+    </div>
+
+    <div id="summernote" class="note-editable"></div>
+    
+    <div>
+        <button type="button" class="btn btn-success pull-right">Сохранить</button>
+    </div>
+
+</form>
+
+@section styles
+{
+    @Styles.Render("~/Content/summernote")
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/summernote")
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#summernote').summernote({ lang: "ru-RU"});
+        });
+    </script>
+}

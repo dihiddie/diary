@@ -53,3 +53,14 @@
     margin: 20px 0 0 0;
     text-align: justify;
 }
+.summernotecontainer {
+    position: absolute;
+    /*top: 40px; /* Header Height */
+    /*bottom: 20px; /* Footer Height */
+    height: 600px;
+}
+
+.note-editable {
+    height: 73vh
+}
+
