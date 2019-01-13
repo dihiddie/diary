@@ -182,4 +182,6 @@ D:\work\diary\WebApplication1\obj\Debug\dihiddieDiary.csproj.CoreCompileInputs.c
 D:\work\diary\WebApplication1\obj\Debug\dihiddieDiary.csproj.CopyComplete
 D:\work\diary\WebApplication1\obj\Debug\dihiddieDiary.dll
 D:\work\diary\WebApplication1\obj\Debug\dihiddieDiary.pdb
+D:\work\diary\WebApplication1\obj\Debug\dihiddieDiary.Resources.SharedResources.resources
+D:\work\diary\WebApplication1\obj\Debug\dihiddieDiary.csproj.GenerateResource.cache
 D:\work\diary\WebApplication1\obj\Debug\dihiddieDiary.csprojAssemblyReference.cache

@@ -1,12 +1,12 @@
 ﻿
-@model IEnumerable<string>
+@model IEnumerable<dihiddieDiary.Models.Diary.PostViewModel>
 
 <div class="postcontainer">
     <p>Ну-ка, фрукты, станьте в ряд</p>
     <ul>
         @foreach (var t in Model)
         {
-            <li>@t</li>
+            <li>@t.Title</li>
         }
     </ul>
 </div>

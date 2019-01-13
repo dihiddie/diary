@@ -3,12 +3,13 @@
 @{
     ViewBag.Title = "Дневник";
 }
+@model List<dihiddieDiary.Models.Diary.PostViewModel>
 
 <link href="~/Content/diary.css" rel="stylesheet" type="text/css" />
 <div class="content">
     <div class="row">
         <div class="col-lg-11">
-            @Html.Partial("Post", new string[] { "123", "456", "789" })
+            @Html.Partial("Post", Model)
         </div>
         <div class="col-lg-1">
             <div class="marker">
