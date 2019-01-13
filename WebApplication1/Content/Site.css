@@ -28,6 +28,10 @@ textarea {
     float: none;
 }
 
-.navbar .navbar-collapse {
-    text-align: center;
+.navbar .navbar-collapse { text-align: center; }
+
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+    color: white !important;
+    background-color: transparent !important;
 }
