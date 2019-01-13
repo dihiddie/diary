@@ -21,9 +21,17 @@ namespace dihiddieDiary
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/summernote").Include(
+                "~/Scripts/Summernote/summernote.js",
+                "~/Scripts/Summernote/summernote-ru-RU.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/summernote").Include(
+                "~/Content/summernote/summernote.css",
+                "~/Content/summernote/font-awesome.css"));
         }
     }
 }
