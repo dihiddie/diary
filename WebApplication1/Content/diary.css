@@ -64,3 +64,25 @@
     height: 73vh
 }
 
+.dateTime {
+    font-size: 12px;
+    font-style: italic
+}
+
+.readAll {
+    font-size: 12px;
+    font-weight: bold;
+    color: gray;
+    text-align: right;
+    display: block
+}
+
+.centeralign {
+    display: block;
+    align-content: center
+}
+
+#postTitle {
+    font-weight: bold;
+}
+

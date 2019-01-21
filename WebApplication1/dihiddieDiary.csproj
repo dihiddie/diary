@@ -219,6 +219,7 @@
     <Content Include="Views\Diary\Index.cshtml" />
     <Content Include="Views\Diary\Post.cshtml" />
     <Content Include="Views\Diary\CreateOrEdit.cshtml" />
+    <Content Include="Views\Diary\Read.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

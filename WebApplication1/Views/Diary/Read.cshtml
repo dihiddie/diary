@@ -1,0 +1,10 @@
+﻿@model dihiddieDiary.Models.Diary.PostViewModel
+@{
+    ViewBag.Title = Model.Title;
+}
+<link href="~/Content/diary.css" rel="stylesheet" type="text/css" />
+<div class="content">
+    <h3 id="postTitle" align="center">@Model.Title</h3>
+    <p align="center">@Model.CreateDateTime</p>
+</div>
+<p>@Model.Content</p>

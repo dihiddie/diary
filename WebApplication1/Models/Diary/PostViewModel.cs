@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 using dihiddieDiary.Resources;
 
@@ -13,5 +14,13 @@ namespace dihiddieDiary.Models.Diary
 
         [AllowHtml]
         public string Content { get; set; }
+
+        public DateTime CreateDateTime { get; set; }
+
+        public string ImagePreviewPath { get; set; }
+
+        public string PreviewContent { get; set; }
+
+        public bool IsPreviewed { get; set; }
     }
 }

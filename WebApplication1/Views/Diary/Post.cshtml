@@ -1,17 +1,32 @@
 ﻿
+@using dihiddieDiary.Controllers
+@using dihiddieDiary.Helpers
 @model IEnumerable<dihiddieDiary.Models.Diary.PostViewModel>
 
 <div class="postcontainer">
-    <p>Ну-ка, фрукты, станьте в ряд</p>
-    <ul>
-        @{
-            if (Model != null)
+    @{
+        if (Model != null)
+        {
+            foreach (var postInfo in Model)
             {
-                foreach (var t in Model)
-                 {
-                     <li>t.Title</li>
-                 }
+                <div class="content">
+                    <h3>@postInfo.Title</h3>
+                    <p class="dateTime">@postInfo.CreateDateTime</p>
+                    <p>@postInfo.PreviewContent</p>
+                    @if (!string.IsNullOrEmpty(postInfo.ImagePreviewPath))
+                    {
+                        <img src="@Url.Content("~/Images/" + Path.GetFileName(postInfo.ImagePreviewPath))" alt=""/>
+                    }
+                    <p>@postInfo.PreviewContent</p>
+                    @if (postInfo.IsPreviewed)
+                    {
+                        <div>
+                            @Html.ActionLink("Читать полностью...", nameof(DiaryController.Read), nameof(DiaryController).RemoveController(), new {postId = postInfo.Id}, new {@class = "readAll" })
+                        </div>
+                    }
+                    <hr/>
+                </div>
             }
         }
-    </ul>
+    }
 </div>
