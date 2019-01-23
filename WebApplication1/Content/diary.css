@@ -72,17 +72,21 @@
 .readAll {
     font-size: 12px;
     font-weight: bold;
-    color: gray;
+    color: #474747;
     text-align: right;
     display: block
 }
 
-.centeralign {
-    display: block;
-    align-content: center
+.readAll:hover {
+    text-decoration: none;
+    color: black
 }
 
-#postTitle {
-    font-weight: bold;
-}
+#postTitle { font-weight: bold; }
 
+#mainTitle { color: #474747 }
+
+#mainTitle:hover {
+    text-decoration: none;
+    color: black
+}
