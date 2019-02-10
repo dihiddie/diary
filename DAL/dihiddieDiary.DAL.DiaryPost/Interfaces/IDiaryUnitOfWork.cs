@@ -1,6 +1,7 @@
-﻿namespace dihiddieDiary.DAL.DiaryPost.Interfaces
+﻿namespace dihiddieDiary.DAL.DiaryPost.Core.Interfaces
 {
-    interface IDiaryUnitOfWork
+    public interface IDiaryUnitOfWork
     {
+        IDiaryRepository DiaryRepository { get; set; }
     }
 }

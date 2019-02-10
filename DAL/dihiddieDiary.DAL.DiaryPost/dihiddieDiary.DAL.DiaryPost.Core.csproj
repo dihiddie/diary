@@ -7,8 +7,8 @@
     <ProjectGuid>{9FCFC893-0CC4-448F-A0C7-EA0A97AD7F7F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>dihiddieDiary.DAL.DiaryPost</RootNamespace>
-    <AssemblyName>dihiddieDiary.DAL.DiaryPost</AssemblyName>
+    <RootNamespace>dihiddieDiary.DAL.DiaryPost.Core</RootNamespace>
+    <AssemblyName>dihiddieDiary.DAL.DiaryPost.Core</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -43,10 +43,9 @@
   <ItemGroup>
     <Compile Include="Interfaces\IDiaryRepository.cs" />
     <Compile Include="Interfaces\IDiaryUnitOfWork.cs" />
+    <Compile Include="Models\DiaryPost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,12 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using dihiddieDiary.DAL.DiaryPost.Core.Interfaces;
 using dihiddieDiary.Models.Diary;
 
 namespace dihiddieDiary.Controllers
 {
     public class DiaryController : Controller
     {
+        private readonly IDiaryUnitOfWork diaryUnitOfWork;
+
+        public DiaryController(IDiaryUnitOfWork unitOfWork) => diaryUnitOfWork = unitOfWork;
+
         // GET: Diary
         public ActionResult Index()
         {

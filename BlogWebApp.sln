@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{63F29E37-D2A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dihiddieDiary.DAL.DiaryPost.EF", "DAL\dihiddieDiary.DAL.DiaryPost.EF\dihiddieDiary.DAL.DiaryPost.EF.csproj", "{3727F167-2631-467A-AC78-0850D4BF6A25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dihiddieDiary.DAL.DiaryPost", "DAL\dihiddieDiary.DAL.DiaryPost\dihiddieDiary.DAL.DiaryPost.csproj", "{9FCFC893-0CC4-448F-A0C7-EA0A97AD7F7F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dihiddieDiary.DAL.DiaryPost.Core", "DAL\dihiddieDiary.DAL.DiaryPost\dihiddieDiary.DAL.DiaryPost.Core.csproj", "{9FCFC893-0CC4-448F-A0C7-EA0A97AD7F7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
