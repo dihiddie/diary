@@ -11,6 +11,7 @@ namespace dihiddieDiary.Mapper
             {
                 c.AddProfiles(Assembly.GetExecutingAssembly());
                 c.AddProfile<DiaryPostDataProfile>();
+                c.AddProfile<DiaryPostViewModelDataProfile>();
             });
         }
     }

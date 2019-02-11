@@ -3,5 +3,7 @@
     public interface IDiaryUnitOfWork
     {
         IDiaryRepository DiaryRepository { get; set; }
+
+        void SaveChanges();
     }
 }

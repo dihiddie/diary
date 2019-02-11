@@ -13,5 +13,7 @@ namespace dihiddieDiary.DAL.DiaryPost.Core.Models
         public DateTime? UpdateDateTime { get; set; }
 
         public byte[] Content { get; set; }
+
+        public string PreviewContent { get; set; }
     }
 }

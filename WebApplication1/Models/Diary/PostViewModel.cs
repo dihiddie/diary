@@ -17,10 +17,10 @@ namespace dihiddieDiary.Models.Diary
 
         public DateTime CreateDateTime { get; set; }
 
-        public string ImagePreviewPath { get; set; }
+        // public string ImagePreviewPath { get; set; }
 
         public string PreviewContent { get; set; }
 
-        public bool IsPreviewed { get; set; }
+        // lic bool IsPreviewed { get; set; }
     }
 }
