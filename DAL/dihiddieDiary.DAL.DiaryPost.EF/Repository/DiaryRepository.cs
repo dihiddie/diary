@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using AutoMapper;
+using dihiddieDiary.DAL.DiaryPost.Core.Interfaces;
 using System.Configuration;
 using System.Linq;
-using System.Text;
-using AutoMapper;
-using dihiddieDiary.DAL.DiaryPost.Core.Interfaces;
 
 namespace dihiddieDiary.DAL.DiaryPost.EF.Repository
 {
@@ -27,29 +24,14 @@ namespace dihiddieDiary.DAL.DiaryPost.EF.Repository
 
         public Core.Models.DiaryPost[] GetPreviews(int take, int skip)
         {
-            List<Core.Models.DiaryPost> diaryPosts = new List<Core.Models.DiaryPost>();
             var posts = context.diary_post.OrderByDescending(x => x.createDateTime).ToList(); //Take(take).Skip(skip);
-            foreach (var post in posts)
-            {
-                var diaryPost = Mapper.Map<Core.Models.DiaryPost>(post);
-                diaryPost.PreviewContent = GetContentForPreview(Encoding.UTF8.GetString(post.content));
-                diaryPosts.Add(diaryPost);
-            }
-
-            return diaryPosts.ToArray();
+            return Mapper.Map<Core.Models.DiaryPost[]>(posts);
         }
 
         public Core.Models.DiaryPost GetPost(int postId)
         {
-            return null;
-        }
-
-        private string GetContentForPreview(string content)
-        {
-            if (content.Length <= previewSymbolsCount) return content;
-            var onSymbolsCount = content.Substring(previewSymbolsCount);
-            var closedTagIndexOf = onSymbolsCount.IndexOf(">", StringComparison.Ordinal);
-            return content.Substring(0, previewSymbolsCount + closedTagIndexOf);
+            var postInDb = context.diary_post.FirstOrDefault(x => x.id == postId);
+            return Mapper.Map<Core.Models.DiaryPost>(postInDb);
         }
     }
 }

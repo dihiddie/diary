@@ -18,7 +18,7 @@ namespace dihiddieDiary.Mapper
             CreateMap<DiaryPost, PostViewModel>()
                 .ForMember(x => x.Id, x => x.MapFrom(y => y.Id))
                 .ForMember(x => x.Title, x => x.MapFrom(y => y.Title))
-                .ForMember(x => x.Content, x => x.MapFrom(y => y.Content))
+                .ForMember(x => x.Content, x => x.MapFrom(y => Encoding.UTF8.GetString(y.Content)))
                 .ForMember(x => x.CreateDateTime, x => x.MapFrom(y => y.CreateDateTime));
         }
     }
