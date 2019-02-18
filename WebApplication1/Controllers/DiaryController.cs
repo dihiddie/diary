@@ -32,8 +32,7 @@ namespace dihiddieDiary.Controllers
         }
 
         public ActionResult Read(int postId)
-        {
-            var val = AutoMapper.Mapper.Map<PostViewModel>(diaryUnitOfWork.DiaryRepository.GetPost(postId));
+        {            
             return View(AutoMapper.Mapper.Map<PostViewModel>(diaryUnitOfWork.DiaryRepository.GetPost(postId)));
         }
     }

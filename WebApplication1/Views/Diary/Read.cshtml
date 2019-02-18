@@ -2,9 +2,31 @@
 @{
     ViewBag.Title = Model.Title;
 }
+
+<link href="~/Content/diary.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css">
+
 <link href="~/Content/diary.css" rel="stylesheet" type="text/css" />
 <div class="content">
     <h3 id="postTitle" align="center">@Model.Title</h3>
     <p align="center">@Model.CreateDateTime</p>
 </div>
-<p>@Model.Content</p>
+<div id="readPostId">@Model.Content</div>
+@*<div id="readSummerNoteId" class="nore-editable"></div>*@
+
+    
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/summernote")
+
+    <script type="text/javascript">     
+
+        $('#readPostId').each(function () {
+            var $this = $(this);
+            var t = $this.text();
+            $this.html(t.replace('&lt', '<').replace('&gt', '>'));
+        });
+
+    </script>
+}
