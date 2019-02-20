@@ -12,14 +12,10 @@
     <p align="center">@Model.CreateDateTime</p>
 </div>
 <div id="readPostId">@Model.Content</div>
-@*<div id="readSummerNoteId" class="nore-editable"></div>*@
 
     
 
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-    @Scripts.Render("~/bundles/summernote")
-
     <script type="text/javascript">     
 
         $('#readPostId').each(function () {

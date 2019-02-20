@@ -3,7 +3,6 @@
 @{
     ViewBag.Title = "Дневник";
 }
-@*@model List<>*@
 @model dihiddieDiary.Models.Diary.PostViewModel[]
 
 <link href="~/Content/diary.css" rel="stylesheet" type="text/css" />
@@ -35,5 +34,11 @@
             window.location.href =
                 '@Url.Action(nameof(DiaryController.CreateOrEdit), nameof(DiaryController).RemoveController())';
         }
+
+        $('.previewContent').each(function(){
+            var $this = $(this);
+            var t = $this.text();
+            $this.html(t.replace('&lt', '<').replace('&gt', '>'));
+        });
     </script>
 }
