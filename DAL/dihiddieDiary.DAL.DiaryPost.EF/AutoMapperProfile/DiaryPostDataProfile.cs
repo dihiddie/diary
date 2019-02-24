@@ -24,9 +24,9 @@ namespace dihiddieDiary.DAL.DiaryPost.EF.AutoMapperProfile
         {
             var previewSymbolsCount = int.Parse(ConfigurationManager.AppSettings["PreviewSymbolsCount"]);
             if (content.Length <= previewSymbolsCount) return content;
-            var onSymbolsCount = content.Substring(0, previewSymbolsCount);
+            var onSymbolsCount = content.Substring(previewSymbolsCount);
             var closedTagIndexOf = onSymbolsCount.IndexOf(">", StringComparison.Ordinal);
-            return content.Substring(0, previewSymbolsCount + closedTagIndexOf);
+            return content.Substring(0, previewSymbolsCount + closedTagIndexOf + 1);
         }
     }
 }
